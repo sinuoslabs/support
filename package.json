@@ -1,0 +1,91 @@
+{
+  "name": "@sinuos/support",
+  "version": "0.0.0",
+  "description": "NodeJS support for collection, array and string",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rimraf -rf dist && tsc -p tsconfig.json",
+    "format": "prettier --write \"{lib,test}/**/*.ts\"",
+    "lint": "eslint 'lib/**/*.ts' --fix",
+    "test": "jest --force-exit --runInBand",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public"
+  },
+  "lint-staged": {
+    "**/*": "pretty-quick --staged"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Houssene Dao",
+      "email": "dao.houssene@gmail.com",
+      "url": "https://twitter.com/houssenedao"
+    },
+    {
+      "name": "Hassane Dao",
+      "email": "dao.hassane@gmail.com",
+      "url": "https://twitter.com/daohassane"
+    }
+  ],
+  "files": [
+    "lib/**/*",
+    "*.md",
+    "index.ts",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "String",
+    "Array",
+    "Collection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinuoslabs/support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sinuoslabs/support/issues"
+  },
+  "homepage": "https://github.com/sinuoslabs/support#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-angular": "^16.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "lib",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
