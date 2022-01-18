@@ -1,27 +1,29 @@
 export interface IString {
   after(): this;
-  camel(): this;
+  camel(value: string): this;
   finish(): this;
   is(): this;
   slug(): this;
   startWith(): this;
-  upper(): this;
+  upper(value: string): this;
+  capitalize(value: string): this;
   snake(): this;
   studly(): this;
   words(): this;
   title(): this;
   singular(): this;
-  plural(): this;
+  plural(value: string, count: number): this;
   start(): this;
+  random(length: number): this;
   end(): this;
   endWith(): this;
   contains(): this;
   before(): this;
   lower(value: string): this;
-  length(value: string, encoding: string): this;
+  l(value: string, encoding: string): this;
   kebab(value: string): this;
-  limit(value: string, limit?: number, end?: string): this;
+  limit(value: string, limit: number, end: string): this;
   replaceFirst(): this;
   replaceLast(): this;
-  ucFirst(): this;
+  ucFirst(value: string): this;
 }
