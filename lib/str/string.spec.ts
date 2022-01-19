@@ -24,4 +24,26 @@ describe('Str', () => {
       expect(str.ucFirst('hello world!')).toEqual('Hello world!');
     });
   });
+
+  describe('Property contains', () => {
+    it('should be have property contain', () => {
+      expect(str).toHaveProperty('contains');
+    });
+
+    it('should be use contains have value', () => {
+      expect(str.contains('test', 'tes')).toEqual(false);
+    });
+
+    it('should be use contains have value', () => {
+      expect(str.contains('test', 'test')).toEqual(true);
+    });
+
+    it('value not exist in array', () => {
+      expect(str.contains('hello', ['fly', 'hell', 'bye'])).toEqual(false);
+    });
+
+    it('value not exist in array', () => {
+      expect(str.contains('hello', ['fly', 'hello', 'bye'])).toEqual(true);
+    });
+  });
 });

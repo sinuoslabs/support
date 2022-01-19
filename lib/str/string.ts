@@ -10,4 +10,14 @@ export class Str implements IString {
   ucFirst(value: string): string {
     return value.charAt(0).toUpperCase() + value.substring(1);
   }
+
+  /**
+   * Determine if a given string contains a given substring.
+   * @param value
+   * @param needles
+   * @return boolean
+   */
+  contains(value: string, needles: string | string[]): boolean {
+    return needles.includes(value);
+  }
 }
