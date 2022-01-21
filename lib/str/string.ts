@@ -1,5 +1,31 @@
 import { IString } from './string.interface';
 
-export class Str extends String implements IString {
-  //
+export class Str implements IString {
+  /**
+   * Make a string's first character uppercase.
+   * @method
+   * @param {string} value
+   * @return string
+   */
+  ucFirst(value: string): string {
+    return value.charAt(0).toUpperCase() + value.substring(1);
+  }
+
+  /**
+   * Determine if a given string contains a given substring.
+   * @param value
+   * @param needles
+   * @return boolean
+   */
+  contains(value: string, needles: string | string[]): boolean {
+    return needles.includes(value);
+  }
+
+  /**
+   * Convert the given string to lower-case.
+   * @param value
+   */
+  lower(value: string): string {
+    return value.toLowerCase();
+  }
 }
