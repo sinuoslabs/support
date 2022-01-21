@@ -3,4 +3,3 @@ lib/**/files/**
 lib/channels/**
 test/**
 *.spec.ts
-*.md
