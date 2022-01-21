@@ -46,4 +46,18 @@ describe('Str', () => {
       expect(str.contains('hello', ['fly', 'hello', 'bye'])).toEqual(true);
     });
   });
+
+  describe('Property lower', () => {
+    it('should be have property lower', () => {
+      expect(str).toHaveProperty('lower');
+    });
+
+    it('should be use lower property', () => {
+      expect(str.lower('Test')).toEqual('test');
+    });
+
+    it('lower not affected more word than first', () => {
+      expect(str.lower('Hello World!')).toEqual('hello world!');
+    });
+  });
 });

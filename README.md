@@ -25,10 +25,13 @@ For the majority of the remaining Str documentation
 
 [contains](#method-contains)
 [ucFirst](#method-ucFirst)
+[lower](#method-lower)
 
 #### <a name="method-contains"></a> `contains()`
 
 #### <a name="method-ucFirst"></a> `ucFirst()`
+
+#### <a name="method-lower"></a> `lower()`
 
 ## <a name="arr"></a> Array - Arr
 

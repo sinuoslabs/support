@@ -20,4 +20,12 @@ export class Str implements IString {
   contains(value: string, needles: string | string[]): boolean {
     return needles.includes(value);
   }
+
+  /**
+   * Convert the given string to lower-case.
+   * @param value
+   */
+  lower(value: string): string {
+    return value.toLowerCase();
+  }
 }
