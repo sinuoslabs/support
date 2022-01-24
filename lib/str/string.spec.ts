@@ -104,4 +104,15 @@ describe('Str', () => {
       expect(str.lcfirst('Hello World!')).toEqual('hello World!');
     });
   });
+
+  describe('Property removeSpecialCharacters', () => {
+    it('should be have property removeSpecialCharacters', () => {
+      expect(str).toHaveProperty('removeSpecialCharacters');
+    });
+
+    it('should be use removeSpecialCharacters property', () => {
+      expect(str.removeSpecialCharacters('hell@')).toEqual('hell');
+      expect(str.removeSpecialCharacters('wèéòàùì')).toEqual('weeoaui');
+    });
+  });
 });

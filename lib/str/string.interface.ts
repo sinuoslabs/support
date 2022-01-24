@@ -4,4 +4,5 @@ export interface IString {
   lower(value: string): string;
   palindrome(value: string): boolean;
   lcfirst(value: string): string;
+  removeSpecialCharacters(value: string): string;
 }
