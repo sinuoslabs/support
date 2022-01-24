@@ -113,6 +113,21 @@ describe('Str', () => {
     it('should be use removeSpecialCharacters property', () => {
       expect(str.removeSpecialCharacters('hell@')).toEqual('hell');
       expect(str.removeSpecialCharacters('wèéòàùì')).toEqual('weeoaui');
+      expect(str.removeSpecialCharacters('wèéòàùì apple')).toEqual('weeoaui apple');
+    });
+  });
+
+  describe('Property slug', () => {
+    it('should be have property slug', () => {
+      expect(str).toHaveProperty('slug');
+    });
+
+    it('should be use slug property', () => {
+      expect(str.slug('bonjour le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonjour le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug('bonjoùr le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonjoùr le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonj@ùr le monde')).toEqual('bonjur-le-monde');
     });
   });
 });

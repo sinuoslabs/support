@@ -5,4 +5,5 @@ export interface IString {
   palindrome(value: string): boolean;
   lcfirst(value: string): string;
   removeSpecialCharacters(value: string): string;
+  slug(value: string, separator?: string): string;
 }
