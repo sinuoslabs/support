@@ -53,4 +53,13 @@ export class Str implements IString {
   lcfirst(value: string): string {
     return value.charAt(0).toLowerCase() + value.substring(1);
   }
+
+  /**
+   * Remove all special characters.
+   * @param {string} value
+   * @return string
+   */
+  removeSpecialCharacters(value: string): string {
+    return value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '');
+  }
 }
