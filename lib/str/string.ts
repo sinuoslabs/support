@@ -1,4 +1,5 @@
 import { IString } from './string.interface';
+import { StrException } from '../exceptions';
 
 export class Str implements IString {
   /**
@@ -13,8 +14,8 @@ export class Str implements IString {
 
   /**
    * Determine if a given string contains a given substring.
-   * @param value
-   * @param needles
+   * @param {string} value
+   * @param {string} needles
    * @return boolean
    */
   contains(value: string, needles: string | string[]): boolean {
@@ -23,9 +24,23 @@ export class Str implements IString {
 
   /**
    * Convert the given string to lower-case.
-   * @param value
+   * @param {string} value
+   * @return string
    */
   lower(value: string): string {
     return value.toLowerCase();
+  }
+
+  /**
+   * Check string is palindrome.
+   * @param {string} value
+   * @return boolean
+   */
+  palindrome(value: string): boolean {
+    if (value.match(/[\W_]/g)) {
+      throw new StrException(`please define a single word`);
+    }
+
+    return value.toLowerCase() === value.toLowerCase().split('').reverse().join('');
   }
 }

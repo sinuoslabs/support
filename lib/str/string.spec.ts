@@ -1,4 +1,5 @@
 import { Str } from './string';
+import { StrException } from '../exceptions';
 
 describe('Str', () => {
   let str = new Str();
@@ -58,6 +59,35 @@ describe('Str', () => {
 
     it('lower not affected more word than first', () => {
       expect(str.lower('Hello World!')).toEqual('hello world!');
+    });
+  });
+
+  describe('Property palindrome', () => {
+    it('should be have property palindrome', () => {
+      expect(str).toHaveProperty('palindrome');
+    });
+
+    it('string is palindrome', () => {
+      expect(str.palindrome('kayak')).toEqual(true);
+      expect(str.palindrome('Kayak')).toEqual(true);
+      expect(str.palindrome('KaYak')).toEqual(true);
+      expect(str.palindrome('kayaK')).toEqual(true);
+      expect(str.palindrome('KayaK')).toEqual(true);
+      expect(str.palindrome('KaYaK')).toEqual(true);
+    });
+
+    it('string is not palindrome', () => {
+      expect(str.palindrome('Hello')).toEqual(false);
+    });
+
+    it('palindrome method return exception if value is more 1 word', () => {
+      expect(() => {
+        str.palindrome('Hello world');
+      }).toThrow('please define a single word');
+
+      expect(() => {
+        str.palindrome('Hello world');
+      }).toThrowError(StrException);
     });
   });
 });
