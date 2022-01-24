@@ -24,14 +24,14 @@
 For the majority of the remaining Str documentation
 
 [contains](#method-contains)
-[ucFirst](#method-ucFirst)
+[ucfirst](#method-ucfirst)
 [lower](#method-lower)
 [lcfirst](#method-lcfirst)
 [palindrome](#method-palindrome)
 
 #### <a name="method-contains"></a> `contains()`
 
-#### <a name="method-ucFirst"></a> `ucFirst()`
+#### <a name="method-ucfirst"></a> `ucfirst()`
 
 #### <a name="method-lower"></a> `lower()`
 

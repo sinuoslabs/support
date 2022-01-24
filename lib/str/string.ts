@@ -8,7 +8,7 @@ export class Str implements IString {
    * @param {string} value
    * @return string
    */
-  ucFirst(value: string): string {
+  ucfirst(value: string): string {
     return value.charAt(0).toUpperCase() + value.substring(1);
   }
 

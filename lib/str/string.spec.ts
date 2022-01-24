@@ -12,17 +12,17 @@ describe('Str', () => {
     expect(str).toBeDefined();
   });
 
-  describe('Property ucFirst', () => {
-    it('should be have property ucFirst', () => {
-      expect(str).toHaveProperty('ucFirst');
+  describe('Property ucfirst', () => {
+    it('should be have property ucfirst', () => {
+      expect(str).toHaveProperty('ucfirst');
     });
 
-    it('should be use ucFirst property', () => {
-      expect(str.ucFirst('test')).toEqual('Test');
+    it('should be use ucfirst property', () => {
+      expect(str.ucfirst('test')).toEqual('Test');
     });
 
-    it('ucFirst not affected more word than first', () => {
-      expect(str.ucFirst('hello world!')).toEqual('Hello world!');
+    it('ucfirst not affected more word than first', () => {
+      expect(str.ucfirst('hello world!')).toEqual('Hello world!');
     });
   });
 
