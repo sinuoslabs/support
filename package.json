@@ -1,6 +1,6 @@
 {
   "name": "@sinuos/support",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "NodeJS support for collection, array and string",
   "main": "index.ts",
   "scripts": {
