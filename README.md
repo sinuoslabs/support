@@ -28,7 +28,8 @@ For the majority of the remaining Str documentation
 [lower](#method-lower)
 [lcfirst](#method-lcfirst)
 [palindrome](#method-palindrome)
-[palindrome](#method-remove-special-characters)
+[removeSpecialCharacters](#method-remove-special-characters)
+[replaceSpecialChars](#method-remove-special-chars)
 
 #### <a name="method-contains"></a> `contains()`
 
@@ -41,6 +42,8 @@ For the majority of the remaining Str documentation
 #### <a name="method-palindrome"></a> `palindrome()`
 
 #### <a name="method-remove-special-characters"></a> `removeSpecialCharacters()`
+
+#### <a name="method-remove-special-chars"></a> `removeSpecialCharacters()`
 
 ## <a name="arr"></a> Array - Arr
 
