@@ -60,6 +60,20 @@ export class Str implements IString {
    * @return string
    */
   removeSpecialCharacters(value: string): string {
-    return value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '');
+    return value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z ])/g, '');
+  }
+
+  /**
+   *
+   * @param value
+   * @param separator
+   */
+  slug(value: string, separator?: string): string {
+    const cleanString = this.removeSpecialCharacters(value);
+
+    return cleanString
+      .trim()
+      .toLowerCase()
+      .replace(/[^\w-]/g, separator || '-');
   }
 }
