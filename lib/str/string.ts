@@ -71,10 +71,7 @@ export class Str implements IString {
   slug(value: string, separator?: string): string {
     const cleanString = this.removeSpecialCharacters(value);
 
-    return cleanString
-      .trim()
-      .toLowerCase()
-      .replace(/[^\w-]/g, separator || '-');
+    return this.replaceSpecialChars(cleanString.trim(), separator || '-');
   }
 
   /**

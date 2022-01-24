@@ -28,6 +28,7 @@ For the majority of the remaining Str documentation
 [lower](#method-lower)
 [lcfirst](#method-lcfirst)
 [palindrome](#method-palindrome)
+[slug](#method-slug)
 [removeSpecialCharacters](#method-remove-special-characters)
 [replaceSpecialChars](#method-remove-special-chars)
 
@@ -40,6 +41,8 @@ For the majority of the remaining Str documentation
 #### <a name="method-lcfirst"></a> `lcfirst()`
 
 #### <a name="method-palindrome"></a> `palindrome()`
+
+#### <a name="method-slug"></a> `slug()`
 
 #### <a name="method-remove-special-characters"></a> `removeSpecialCharacters()`
 

@@ -128,6 +128,7 @@ describe('Str', () => {
       expect(str.slug('bonjoùr le monde')).toEqual('bonjour-le-monde');
       expect(str.slug(' bonjoùr le monde')).toEqual('bonjour-le-monde');
       expect(str.slug(' bonj@ùr le monde')).toEqual('bonjur-le-monde');
+      expect(str.slug(' bonj@ùr le monde', '_')).toEqual('bonjur_le_monde');
     });
   });
 
