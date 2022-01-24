@@ -76,4 +76,13 @@ export class Str implements IString {
       .toLowerCase()
       .replace(/[^\w-]/g, separator || '-');
   }
+
+  /**
+   * Replace all special characters by replace value
+   * @param value
+   * @param replace
+   */
+  replaceSpecialChars(value: string, replace?: string): string {
+    return value.replace(/[^\w-]/g, replace || '');
+  }
 }

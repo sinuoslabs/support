@@ -6,4 +6,5 @@ export interface IString {
   lcfirst(value: string): string;
   removeSpecialCharacters(value: string): string;
   slug(value: string, separator?: string): string;
+  replaceSpecialChars(value: string, replace?: string): string;
 }

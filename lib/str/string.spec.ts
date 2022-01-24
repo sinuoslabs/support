@@ -130,4 +130,18 @@ describe('Str', () => {
       expect(str.slug(' bonj@ùr le monde')).toEqual('bonjur-le-monde');
     });
   });
+
+  describe('Property replaceSpecialChars', () => {
+    it('should be have property replaceSpecialChars', () => {
+      expect(str).toHaveProperty('replaceSpecialChars');
+    });
+
+    it('should be use replaceSpecialChars property', () => {
+      expect(str.replaceSpecialChars('bonjour le monde')).toEqual('bonjourlemonde');
+      expect(str.replaceSpecialChars(' bonjour le monde', '-')).toEqual('-bonjour-le-monde');
+      expect(str.replaceSpecialChars('bonjoùr le monde', '*')).toEqual('bonjo*r*le*monde');
+      expect(str.replaceSpecialChars(' bonjoùr le monde')).toEqual('bonjorlemonde');
+      expect(str.replaceSpecialChars(' bonj@ùr le monde')).toEqual('bonjrlemonde');
+    });
+  });
 });
