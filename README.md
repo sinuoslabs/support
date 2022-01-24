@@ -24,17 +24,29 @@
 For the majority of the remaining Str documentation
 
 [contains](#method-contains)
-[ucFirst](#method-ucFirst)
+[ucfirst](#method-ucfirst)
 [lower](#method-lower)
+[lcfirst](#method-lcfirst)
 [palindrome](#method-palindrome)
+[slug](#method-slug)
+[removeSpecialCharacters](#method-remove-special-characters)
+[replaceSpecialChars](#method-remove-special-chars)
 
 #### <a name="method-contains"></a> `contains()`
 
-#### <a name="method-ucFirst"></a> `ucFirst()`
+#### <a name="method-ucfirst"></a> `ucfirst()`
 
 #### <a name="method-lower"></a> `lower()`
 
+#### <a name="method-lcfirst"></a> `lcfirst()`
+
 #### <a name="method-palindrome"></a> `palindrome()`
+
+#### <a name="method-slug"></a> `slug()`
+
+#### <a name="method-remove-special-characters"></a> `removeSpecialCharacters()`
+
+#### <a name="method-remove-special-chars"></a> `removeSpecialCharacters()`
 
 ## <a name="arr"></a> Array - Arr
 

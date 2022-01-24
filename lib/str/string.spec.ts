@@ -12,17 +12,17 @@ describe('Str', () => {
     expect(str).toBeDefined();
   });
 
-  describe('Property ucFirst', () => {
-    it('should be have property ucFirst', () => {
-      expect(str).toHaveProperty('ucFirst');
+  describe('Property ucfirst', () => {
+    it('should be have property ucfirst', () => {
+      expect(str).toHaveProperty('ucfirst');
     });
 
-    it('should be use ucFirst property', () => {
-      expect(str.ucFirst('test')).toEqual('Test');
+    it('should be use ucfirst property', () => {
+      expect(str.ucfirst('test')).toEqual('Test');
     });
 
-    it('ucFirst not affected more word than first', () => {
-      expect(str.ucFirst('hello world!')).toEqual('Hello world!');
+    it('ucfirst not affected more word than first', () => {
+      expect(str.ucfirst('hello world!')).toEqual('Hello world!');
     });
   });
 
@@ -88,6 +88,61 @@ describe('Str', () => {
       expect(() => {
         str.palindrome('Hello world');
       }).toThrowError(StrException);
+    });
+  });
+
+  describe('Property lcfirst', () => {
+    it('should be have property lcfirst', () => {
+      expect(str).toHaveProperty('lcfirst');
+    });
+
+    it('should be use lcfirst property', () => {
+      expect(str.lcfirst('TEST')).toEqual('tEST');
+    });
+
+    it('lcfirst not affected more word than first', () => {
+      expect(str.lcfirst('Hello World!')).toEqual('hello World!');
+    });
+  });
+
+  describe('Property removeSpecialCharacters', () => {
+    it('should be have property removeSpecialCharacters', () => {
+      expect(str).toHaveProperty('removeSpecialCharacters');
+    });
+
+    it('should be use removeSpecialCharacters property', () => {
+      expect(str.removeSpecialCharacters('hell@')).toEqual('hell');
+      expect(str.removeSpecialCharacters('wèéòàùì')).toEqual('weeoaui');
+      expect(str.removeSpecialCharacters('wèéòàùì apple')).toEqual('weeoaui apple');
+    });
+  });
+
+  describe('Property slug', () => {
+    it('should be have property slug', () => {
+      expect(str).toHaveProperty('slug');
+    });
+
+    it('should be use slug property', () => {
+      expect(str.slug('bonjour le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonjour le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug('bonjoùr le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonjoùr le monde')).toEqual('bonjour-le-monde');
+      expect(str.slug(' bonj@ùr le monde')).toEqual('bonjur-le-monde');
+      expect(str.slug(' bonj@ùr le monde', '_')).toEqual('bonjur_le_monde');
+    });
+  });
+
+  describe('Property replaceSpecialChars', () => {
+    it('should be have property replaceSpecialChars', () => {
+      expect(str).toHaveProperty('replaceSpecialChars');
+    });
+
+    it('should be use replaceSpecialChars property', () => {
+      expect(str.replaceSpecialChars('bonjour le monde')).toEqual('bonjourlemonde');
+      expect(str.replaceSpecialChars(' bonjour le monde', '-')).toEqual('-bonjour-le-monde');
+      expect(str.replaceSpecialChars('bonjoùr le monde', '*')).toEqual('bonjo*r*le*monde');
+      expect(str.replaceSpecialChars(' bonjoùr le monde')).toEqual('bonjorlemonde');
+      expect(str.replaceSpecialChars(' bonj@ùr le monde')).toEqual('bonjrlemonde');
     });
   });
 });

@@ -8,7 +8,7 @@ export class Str implements IString {
    * @param {string} value
    * @return string
    */
-  ucFirst(value: string): string {
+  ucfirst(value: string): string {
     return value.charAt(0).toUpperCase() + value.substring(1);
   }
 
@@ -42,5 +42,44 @@ export class Str implements IString {
     }
 
     return value.toLowerCase() === value.toLowerCase().split('').reverse().join('');
+  }
+
+  /**
+   * Make a string's first character lowercase.
+   * @method
+   * @param {string} value
+   * @return string
+   */
+  lcfirst(value: string): string {
+    return value.charAt(0).toLowerCase() + value.substring(1);
+  }
+
+  /**
+   * Remove all special characters.
+   * @param {string} value
+   * @return string
+   */
+  removeSpecialCharacters(value: string): string {
+    return value.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z ])/g, '');
+  }
+
+  /**
+   *
+   * @param value
+   * @param separator
+   */
+  slug(value: string, separator?: string): string {
+    const cleanString = this.removeSpecialCharacters(value);
+
+    return this.replaceSpecialChars(cleanString.trim(), separator || '-');
+  }
+
+  /**
+   * Replace all special characters by replace value
+   * @param value
+   * @param replace
+   */
+  replaceSpecialChars(value: string, replace?: string): string {
+    return value.replace(/[^\w-]/g, replace || '');
   }
 }
