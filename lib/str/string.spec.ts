@@ -90,4 +90,18 @@ describe('Str', () => {
       }).toThrowError(StrException);
     });
   });
+
+  describe('Property lcfirst', () => {
+    it('should be have property lcfirst', () => {
+      expect(str).toHaveProperty('lcfirst');
+    });
+
+    it('should be use lcfirst property', () => {
+      expect(str.lcfirst('TEST')).toEqual('tEST');
+    });
+
+    it('lcfirst not affected more word than first', () => {
+      expect(str.lcfirst('Hello World!')).toEqual('hello World!');
+    });
+  });
 });

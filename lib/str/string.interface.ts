@@ -3,4 +3,5 @@ export interface IString {
   contains(value: string, needles: string | string[]): boolean;
   lower(value: string): string;
   palindrome(value: string): boolean;
+  lcfirst(value: string): string;
 }

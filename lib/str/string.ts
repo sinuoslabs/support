@@ -43,4 +43,14 @@ export class Str implements IString {
 
     return value.toLowerCase() === value.toLowerCase().split('').reverse().join('');
   }
+
+  /**
+   * Make a string's first character lowercase.
+   * @method
+   * @param {string} value
+   * @return string
+   */
+  lcfirst(value: string): string {
+    return value.charAt(0).toLowerCase() + value.substring(1);
+  }
 }

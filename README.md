@@ -26,6 +26,7 @@ For the majority of the remaining Str documentation
 [contains](#method-contains)
 [ucFirst](#method-ucFirst)
 [lower](#method-lower)
+[lcfirst](#method-lcfirst)
 [palindrome](#method-palindrome)
 
 #### <a name="method-contains"></a> `contains()`
@@ -33,6 +34,8 @@ For the majority of the remaining Str documentation
 #### <a name="method-ucFirst"></a> `ucFirst()`
 
 #### <a name="method-lower"></a> `lower()`
+
+#### <a name="method-lcfirst"></a> `lcfirst()`
 
 #### <a name="method-palindrome"></a> `palindrome()`
 
