@@ -24,7 +24,7 @@ What kind of change does this PR introduce?
 
 <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -->
 
-Issue Number: N/A
+Issue Num: N/A
 
 ## What is the new behavior?
 
