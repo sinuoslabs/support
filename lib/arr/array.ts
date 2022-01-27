@@ -7,7 +7,7 @@ export const Arr = class {
    * @param fn
    */
   static sort(array: Array<any>, fn?: (a, b) => number) {
-    if (!Array.isArray(array)) throw new ArrException(`Your argument is not array`);
+    if (!Array.isArray(array)) throw new ArrException(`The received parameter is not an array`);
 
     return array.sort(fn);
   }
