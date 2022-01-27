@@ -1,4 +1,5 @@
 import { Arr } from './array';
+import { ArrException } from '../exceptions';
 
 describe('Arr', () => {
   // let arr: Arr;
@@ -14,6 +15,15 @@ describe('Arr', () => {
   describe('sort', () => {
     it('should have sort method', () => {
       expect(Arr).toHaveProperty('sort');
+    });
+
+    it('throw exception if parameter is not array', () => {
+      expect(() => {
+        Arr.sort([]);
+      }).toThrow('You parameter can not be empty');
+      expect(() => {
+        Arr.sort([]);
+      }).toThrowError(ArrException);
     });
 
     it('should use sort method with array number', () => {
