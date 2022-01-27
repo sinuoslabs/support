@@ -9,6 +9,8 @@ export const Arr = class {
   static sort(array: Array<any>, fn?: (a, b) => number) {
     if (!Array.isArray(array)) throw new ArrException(`The received parameter is not an array`);
 
+    if (array.length <= 0) throw new ArrException(`You parameter can not be empty`);
+
     return array.sort(fn);
   }
 };
