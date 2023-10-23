@@ -50,8 +50,8 @@
   },
   "homepage": "https://github.com/sinuoslabs/support#readme",
   "devDependencies": {
-    "@commitlint/cli": "17.8.1",
-    "@commitlint/config-angular": "17.8.1",
+    "@commitlint/cli": "18.0.0",
+    "@commitlint/config-angular": "18.0.0",
     "@semantic-release/git": "10.0.1",
     "@types/jest": "29.5.6",
     "@types/node": "18.18.6",
