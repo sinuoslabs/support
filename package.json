@@ -67,7 +67,7 @@
     "prettier": "3.10.1",
     "pretty-quick": "4.2.2",
     "rimraf": "6.1.4",
-    "semantic-release": "25.0.9",
+    "semantic-release": "26.0.1",
     "ts-jest": "29.4.15",
     "typescript": "7.0.2"
   },
